@@ -4,4 +4,4 @@
 
 ## Setup
 
-## Features
+## Usage
