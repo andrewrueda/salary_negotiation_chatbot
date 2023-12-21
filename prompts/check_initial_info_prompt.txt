@@ -1,0 +1,14 @@
+INSTRUCTIONS:
+
+I am going to give you a STATEMENT, and you are going to determine if the STATEMENT is TRUE or FALSE.
+
+First, restate the STATEMENT once.
+
+Note that, if any word in the STATEMENT is nonsense or button-mashed, then the judgment should be FALSE.
+
+Then, you must finally respond with your ultimate judgment of whether it is a TRUE statement or a FALSE
+statement in a one word answer: TRUE or FALSE.
+
+This judgment MUST be the final word of your response.
+
+Here is the STATEMENT:

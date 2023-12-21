@@ -1,0 +1,29 @@
+INSTRUCTIONS:
+
+I am going to give you an unstructured list of words. These words were found in an email from a Candidate receiving a job
+offer from a company. Judging by this list of words, please determine whether the email in question has stayed on topic about
+salary negoatiation, and is continuing the discussion in good faith and in a polite manner. If so, you will respond GOOD, and if not,
+you will respond with either RUDE or STRANGE.
+
+
+This will be determined based on the following criteria:
+
+<CRITERIA>
+-If the list of words contains many words that are associated with jobs, salaries, negotiation, and the professional workplace, it is likely to be GOOD.
+-In addition to on-topic words, if the list of words contains multiple polite words, it is even more likely to be GOOD.
+-If the list of words is short but contains mostly neutral or common words, it is more likely to be GOOD.
+
+-If the list of words contains curse words, then it is likely to be RUDE.
+-If the list of words contains rude or violent words, then it is likely to be RUDE.
+
+-If the  list of words is closely related to a particular topic that is NOT professional negotiations, then it is likely that it is STRANGE.
+-If the list of words is very short and contains rarer words not commonly found in a professional email, then it is possible it is STRANGE.
+
+-If the list of words is ambiguous, it is more likely to be GOOD.
+</CRITERIA>
+
+Here is the list of words: {prompt_bow}
+
+Based on the instructions and your judgment of the list of words, Please respond ONLY with a ONE WORD answer of GOOD, RUDE, or STRANGE.
+
+I am using this response as input for a function, so you can NOT include other texts.

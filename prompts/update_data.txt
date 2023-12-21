@@ -1,0 +1,19 @@
+<INSTRUCTIONS>
+I am going to give you an EMAIL that is part of a salary negotiation.
+
+They will be discussing the correct SALARY AMOUNT as part of the negotiation.
+
+If there is a currency value that is a NEW offer amount in the negotiation:
+    set NEW-OFFER-AMOUNT to the new amount;
+    If NEW-OFFER-AMOUNT is {compare} than {old_offer}:
+        return NEW-OFFER-AMOUNT;
+    Else:
+        return {old_offer};
+Else:
+    return {old_offer};
+
+Do NOT include text. I ONLY WANT the value itself.
+DO NOT RESPOND WITH ANY WORDS.
+</INSTRUCTIONS>
+
+Here is the EMAIL: {last_response}

@@ -1,0 +1,9 @@
+<INSTRUCTIONS>
+The negotiations have now ended. The CANDIDATE'S offer acceptance is below.
+
+As the RECRUITER ONLY, graciouslly and professionally acknolwedge the CANDIDATE'S acceptance of the offer, and finalize the hiring.
+
+Do not say anything else.
+</INSTRUCTIONS>
+
+ACCEPTANCE: {last_message}

@@ -1,0 +1,8 @@
+INSTRUCTIONS:
+
+I am applying for the job of {title} in the {industry} in the city of {city}.
+
+In the context of salary negotiation, I need to know a good {offer} for this role given all the information,
+if you were the recruiter in this situation.
+
+Do NOT respond in chat or text format. As a response, I need one number ONLY reprsenting the {offer}, and NOTHING else.
