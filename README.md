@@ -6,7 +6,7 @@ This is SALL-E, a customized chatbot using LLaMa2 to simulate a salary negotiati
 
 SALL-E is tightly guardrailed with narrow constraints to avoid this issue:
 
-<img src="[IMAGE_URL](https://github.com/andrewrueda/salary_negotiation_chatbot/assets/132158308/87aa2597-25d1-4c9f-bf0c-bf11dd888157)" alt="Chevrolet Chatbot Fail" width=40 height=60>
+<img src="[IMAGE_URL](https://github.com/andrewrueda/salary_negotiation_chatbot/assets/132158308/87aa2597-25d1-4c9f-bf0c-bf11dd888157)" alt="Chevrolet Chatbot Fail" width="WIDTH" height="HEIGHT">
 
 ## Setup
 
