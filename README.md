@@ -8,7 +8,7 @@
 
 This program uses Ollama to load LLaMa2 onto your machine.
 
-[Download Link](https://ollama.ai/download)
+[Download](https://ollama.ai/download)
 
 #### Manual Installation
 Linux: curl https://ollama.ai/install.sh | sh
