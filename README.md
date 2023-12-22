@@ -12,7 +12,8 @@ SALL-E is tightly guardrailed with narrow constraints in an effort to avoid this
   <figcaption> Source: Twitter
 </figure>
 
----
+***
+
 This is done with internal prompt-based input validation, as well as a simple data structure stack to cache consistent information, such as `current_offer` and `max_offer`.
 
 A professional tone will help your cause, whereas rude or off-topic trolling will likely get the offer withdrawn.
