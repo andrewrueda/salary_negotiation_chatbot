@@ -8,6 +8,8 @@ SALL-E is tightly guardrailed with narrow constraints to avoid this issue:
 
 <img src="files/chevygpt.jpg" alt="Chevrolet Chatbot Fail" height="400">
 
+This is done with prompt-based input validation, as well as a simple data structure stack to cache consistent information, such as current_offer and max_offer.
+
 ## Setup
 
 ### Ollama
