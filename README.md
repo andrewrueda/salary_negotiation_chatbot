@@ -2,6 +2,12 @@
 
 ## Overview
 
+This is SALL-E, a customized chatbot using LLaMa2 to simulate a salary negotiation through email dialogue. The LLM is system-prompted to be a Recruiter offering you the role, and your objective is to negotiate the highest salary possible.
+
+SALL-E is tightly guardrailed with narrow constraints to avoid this issue:
+
+![Image]![chevygpt](https://github.com/andrewrueda/salary_negotiation_chatbot/assets/132158308/87aa2597-25d1-4c9f-bf0c-bf11dd888157)
+
 ## Setup
 
 ### Ollama
