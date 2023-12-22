@@ -65,10 +65,10 @@ Initialize the roleplay game by entering in `industry`, `job_title`, and `city` 
 
 Engage in dialogue with CounterChat to try and maximize your salary! The salary range should be appropriate for the job details. The Recruiter's decisions won't always be the same for the same input.
 
-<img src="files/counter_offer.png" alt="Conter Offer" height="250">
+<img src="files/counter_offer.png" alt="Conter Offer" height="275">
 
 The Negotiation will have an official end if you agree upon an offer, if you decline the job, or if the offer is withdrawn:
 
-<img src="files/accepted_result.png" alt="Accepted Result" height="250"> <img src="files/decline_result.png" alt="Decline Result" height="250">
-<img src="files/withdraw_result.png" alt="Withdraw Result" height="250">
+<img src="files/accepted_result.png" alt="Accepted Result" height="275"> <img src="files/decline_result.png" alt="Decline Result" height="275">
+<img src="files/withdraw_result.png" alt="Withdraw Result" height="275">
 
