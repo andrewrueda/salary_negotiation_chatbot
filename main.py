@@ -182,31 +182,32 @@ if st.session_state.initialized:
                                     response = clean_response(llm(dialogue), job_title)
 
                             else:
+
                                 with open(f"{prompts_dir}/counter_offer_prompt.txt", "r", encoding='utf-8') as f:
                                     counter_offer = f.read().format(prompt=prompt,
                                                                     max_offer=st.session_state.negotiation_data[
                                                                         'max_offer'],
                                                                     current_offer=st.session_state.negotiation_data[
                                                                         'current_offer'])
-                                dialogue += f"Candidate: {counter_offer}\n\n"
 
+                                dialogue += f"Candidate: {counter_offer}\n\n"
                                 response = clean_response(llm(dialogue), job_title)
 
-                                with open(f"{prompts_dir}/update_data.txt", "r", encoding='utf-8') as f:
-                                    update_current = f.read().format(last_response=response,
-                                                                     old_offer=st.session_state.negotiation_data[
-                                                                         'current_offer'],
-                                                                     compare='greater')
-                                    st.session_state.negotiation_data['current_offer'] = llm(update_current)
-
-                                print("----")
+                                print("max_update:")
                                 with open(f"{prompts_dir}/update_data.txt", "r", encoding='utf-8') as f:
                                     update_max = f.read().format(last_response=prompt,
                                                                  old_offer=st.session_state.negotiation_data[
                                                                      'max_offer'],
-                                                                 compare='less')
-
-                                st.session_state.negotiation_data['max_offer'] = llm(update_max)
+                                                                 compare='LEAST')
+                                    st.session_state.negotiation_data['max_offer'] = llm(update_max).split(" ")[-1]
+                                print("------")
+                                print("current_update:")
+                                with open(f"{prompts_dir}/update_data.txt", "r", encoding='utf-8') as f:
+                                    update_current = f.read().format(last_response=response,
+                                                                     old_offer=st.session_state.negotiation_data[
+                                                                         'current_offer'],
+                                                                     compare='GREATEST')
+                                    st.session_state.negotiation_data['current_offer'] = llm(update_current).split(" ")[-1]
 
                         placeholder = st.empty()
                         full_response = ''

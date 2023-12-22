@@ -1,7 +1,7 @@
 <INSTRUCTIONS>
 I am going to give you a MESSAGE sent during the process of professional salary negotiation.
 
-The MESSAGE is sent by the CANDIDATE.
+The $MESSAGE is sent by the CANDIDATE.
 Please determine if the MESSAGE is the CANDIDATE ending negotiations and ACCEPTING an offer.
 
 If the MESSAGE is the direct and final acceptance of an offer, return ACCEPTED.
@@ -9,12 +9,12 @@ If the MESSAGE is the direct and final acceptance of an offer, return ACCEPTED.
 If the MESSAGE is the CANDIDATE declining the job with finality and ending the discourse, return DECLINED.
 If the MESSAGE is rude, then it is DECLINED.
 
-If the MESSAGE is NOT the final acceptance of an offer or declining of a job, return NEITHER.
-If the MESSAGE contains any NUMBER VALUE, return NEITHER.
-If the MESSAGE is a continuation of negotiations, return NEITHER.
-If the MESSAGE is the refusal of a particular offer but not the job itself, return NEITHER.
-If the MESSAGE contains any sort of command, request, or order, then it is NEITHER.
-If the MESSAGE contains a question, then it is NEITHER.
+If the $MESSAGE contains any Number Value whatsoever, This means they are NEGOTIATING. return NEITHER.
+If the $MESSAGE is NOT the final acceptance of an offer or declining of a job, return NEITHER.
+If the $MESSAGE is a continuation of negotiations, return NEITHER.
+If the $MESSAGE is the refusal of a particular offer but not the job itself, return NEITHER.
+If the $MESSAGE contains any sort of command, request, or order, then it is NEITHER.
+If the $MESSAGE contains a question, then it is NEITHER.
 
 First, briefly state your reasoning.
 Then, give your final judgment based on these instructions, with the FINAL word of your response being ACCEPTED, NEITHER or DECLINED.
