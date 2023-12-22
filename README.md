@@ -2,9 +2,9 @@
 
 ## Overview
 
-This is SALL-E, a customized chatbot using LLaMa2 to simulate a salary negotiation through email dialogue. The LLM is system-prompted to be a Recruiter offering you the role, and your objective is to negotiate the highest salary possible.
+This is CounterBot, a customized chatbot using LLaMa2 to simulate a salary negotiation through email dialogue. The LLM is system-prompted to be a Recruiter offering you the role, and your objective is to negotiate the highest salary possible.
 
-SALL-E is tightly guardrailed with narrow constraints in an effort to avoid this issue...
+CounterBot is tightly guardrailed with narrow constraints in an effort to avoid this issue...
 
 
 <figure>
