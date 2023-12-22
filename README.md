@@ -17,7 +17,7 @@ Linux:
 curl https://ollama.ai/install.sh | sh
 ```
 
-for more: https://github.com/jmorganca/ollama
+for more: [GitHub](https://github.com/jmorganca/ollama)
 
 ### Run Locally on Streamlit
 
