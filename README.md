@@ -6,7 +6,7 @@ This is SALL-E, a customized chatbot using LLaMa2 to simulate a salary negotiati
 
 SALL-E is tightly guardrailed with narrow constraints to avoid this issue:
 
-<img src="files/chevygpt.jpg" alt="Chevrolet Chatbot Fail" height="200">
+<img src="files/chevygpt.jpg" alt="Chevrolet Chatbot Fail" height="400">
 
 ## Setup
 
