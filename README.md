@@ -33,6 +33,6 @@ To run the program, run the following shell script:
 bash run_negotiate.sh
 ```
 
-This script will pull LLaMa2 onto your machine (3.8GB).
+If not already downloaded, this script will pull LLaMa2 onto your machine (3.8GB).
 
 ## Usage
