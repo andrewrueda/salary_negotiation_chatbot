@@ -19,7 +19,7 @@ curl https://ollama.ai/install.sh | sh
 
 for more: [GitHub](https://github.com/jmorganca/ollama)
 
-### Run Locally on Streamlit
+### Run Locally Using Streamlit
 
 Install the requirements in your own environment:
 
