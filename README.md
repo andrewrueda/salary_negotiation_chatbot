@@ -18,6 +18,7 @@ This is done with internal prompt-based input validation, as well as a simple da
 
 A professional tone will help your cause, whereas rude or off-topic trolling will likely get the offer withdrawn.
 
+Try it out!
 
 ## Setup
 
