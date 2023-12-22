@@ -69,5 +69,6 @@ Engage in dialogue with CounterChat to try and maximize your salary! The salary 
 
 The Negotiation will have an official end if you agree upon an offer, if you decline the job, or if the offer is withdrawn:
 
-<img src="files/accepted_result.png" alt="Accepted Result" height="250"> <img src="files/withdraw_result.png" alt="Withdraw Result" height="250">
+<img src="files/accepted_result.png" alt="Accepted Result" height="250"> <img src="files/decline_result.png" alt="Decline Result" height="250">
+<img src="files/withdraw_result.png" alt="Withdraw Result" height="250">
 
