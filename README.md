@@ -58,7 +58,8 @@ If not already downloaded, this script will pull LLaMa2 onto your machine (3.8GB
 
 Initialize the roleplay game by entering in `industry`, `job_title`, and `city` information. Incomplete or nonsensical input will be rejected.
 
-\img \img
+<img src="files/validating_input" alt="Chevrolet Chatbot Fail" height="400">
+<img src="files/bad_input" alt="Chevrolet Chatbot Fail" height="400">
 
 ### Chat
 
