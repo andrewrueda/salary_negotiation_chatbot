@@ -47,3 +47,13 @@ bash run_negotiate.sh
 If not already downloaded, this script will pull LLaMa2 onto your machine (3.8GB).
 
 ## Usage
+
+### Input Initial Information:
+
+Initialize the roleplay game by entering in `industry`, `job_title`, and `city` information. Incomplete or nonsensical input will be rejected.
+
+\img \img
+
+### Chat
+
+Engage in dialogue with SALL-E to try and maximize your salary! The salary range should be appropriate for the job details. The Recruiter's decisions won't always be the same for the same input.
