@@ -1,3 +1,4 @@
 streamlit==1.29.0
 langchain
+langchain_ollama
 regex

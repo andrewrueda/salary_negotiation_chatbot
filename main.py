@@ -1,14 +1,14 @@
 import streamlit as st
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-from langchain.llms import Ollama
+from langchain_ollama import OllamaLLM
 import regex as re
 import random
 from utils import clean_response
 
 prompts_dir = "./prompts"
 
-llm = Ollama(
+llm = OllamaLLM(
     model="llama2", callback_manager=CallbackManager([StreamingStdOutCallbackHandler()])
 )
 
