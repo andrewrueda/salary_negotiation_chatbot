@@ -59,11 +59,14 @@ if not st.session_state.initialized:
         submitted = st.form_submit_button("Confirm")
 
         if submitted:
+            # Reject incomplete input
             if len(industry) < 3 or len(title) < 3 or len(city) < 2:
                 with st.chat_message("Recruiter"):
                     st.write("Please complete the form!")
 
             else:
+
+                # Validate input
                 with st.chat_message("Recruiter"):
                     with st.spinner("Validating input..."):
                         check_initial_info = []
@@ -92,6 +95,8 @@ if not st.session_state.initialized:
 
                     with st.chat_message("Recruiter"):
                         with st.spinner("Thank you! We can now begin..."):
+
+                            # Prompt initialize starting and max offers
                             with open(f"{prompts_dir}/salary_prompt.txt", "r", encoding='utf-8') as f:
                                 current_offer = llm(f.read().format(industry=industry, title=title,
                                                                     city=city, offer='STARTING OFFER'))
@@ -105,6 +110,7 @@ if not st.session_state.initialized:
                             st.session_state.negotiation_data['max_offer'] = max_offer
                             st.session_state.negotiation_data['current_offer'] = current_offer
 
+                            # Write initital offer email
                             with open(f"{prompts_dir}/system_prompt.txt", "r", encoding='utf-8') as f:
                                 system_prompt = f.read().format(industry=industry, title=title,
                                                                 city=city, starting_salary=current_offer)
@@ -136,7 +142,7 @@ if st.session_state.initialized:
                     check_response = keyword
 
         if check_response.lower().strip() != 'good':
-            # Terminate: breakdown
+            # Terminate: negotiation breakdown
             with st.chat_message("Recruiter"):
                 with st.spinner("Drafting response..."):
                     with open(f"{prompts_dir}/withdraw_prompt.txt", "r", encoding="utf-8") as f:
@@ -148,6 +154,7 @@ if st.session_state.initialized:
                 st.form_submit_button('Yes', on_click=reset_chat)
 
         else:
+            # Determine candidate's most recent negotiation move
             st.session_state.messages.append({"role": "Candidate", "content": prompt})
 
             if st.session_state.messages[-1]["role"] != "Recruiter":
@@ -182,7 +189,7 @@ if st.session_state.initialized:
                                     response = clean_response(llm(dialogue), job_title)
 
                             else:
-
+                                # Reason through candidate's offer and determine counter offer
                                 with open(f"{prompts_dir}/counter_offer_prompt.txt", "r", encoding='utf-8') as f:
                                     counter_offer = f.read().format(prompt=prompt,
                                                                     max_offer=st.session_state.negotiation_data[
@@ -193,15 +200,15 @@ if st.session_state.initialized:
                                 dialogue += f"Candidate: {counter_offer}\n\n"
                                 response = clean_response(llm(dialogue), job_title)
 
-                                print("max_update:")
+                                print("\nmax_update:")
                                 with open(f"{prompts_dir}/update_data.txt", "r", encoding='utf-8') as f:
                                     update_max = f.read().format(last_response=prompt,
                                                                  old_offer=st.session_state.negotiation_data[
                                                                      'max_offer'],
                                                                  compare='LEAST')
                                     st.session_state.negotiation_data['max_offer'] = llm(update_max).split(" ")[-1]
-                                print("------")
-                                print("current_update:")
+                                print("\n------")
+                                print("\ncurrent_update:")
                                 with open(f"{prompts_dir}/update_data.txt", "r", encoding='utf-8') as f:
                                     update_current = f.read().format(last_response=response,
                                                                      old_offer=st.session_state.negotiation_data[
@@ -222,6 +229,7 @@ if st.session_state.initialized:
                             placeholder.markdown(full_response)
                         placeholder.markdown(full_response)
 
+                        # End game
                         if accepted:
                             with st.form("Success"):
                                 st.write(f"Congratulations on getting your job offer"
@@ -232,6 +240,12 @@ if st.session_state.initialized:
                             with st.form("Failure"):
                                 st.write(f"Unfortunately, you did not get the offer you wanted. \n Try again?")
                                 st.form_submit_button('Yes', on_click=reset_chat)
+
+                        # Continue loop
                         else:
                             message = {"role": "Recruiter", "content": full_response}
                             st.session_state.messages.append(message)
+
+                            print(f"\nbuffer:")
+                            print(st.session_state['negotiation_data'])
+                            print()

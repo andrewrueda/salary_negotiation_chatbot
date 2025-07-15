@@ -1,61 +1,65 @@
 I, as the CANDIDATE, am about to respond to you via email. You must then respond to me,
 as the RECRUITER who is NEGOTIATING, based on these INSTRUCTIONS:
 
-<INSTRUCTIONS>
-Details: """BE CAUTIOUS BUT WILLING TO NEGOTIATE!
-Be willing to respond with counter-offers!
-Follow the INSTRUCTIONS, and determine the ACTION."""
+## INSTRUCTIONS ##
 
-initialize variable COUNTER-OFFER;
-initialize variable RESPONSE-OFFER as a value that is LESS than {max_offer} but GREATER than {current_offer}.
+(Reminders:
+    BE CAUTIOUS BUT WILLING TO NEGOTIATE!
+    Be willing to respond with counter-offers!)
+
+You are about to a CANDIDATE EMAIL. Please follow these instructions to determine the next ACTION and RESPONSE.
+
+##
+
+FIRST:
+    Follow the LOGIC-TREE, and determine the variable ACTION.
+
+### LOGIC-TREE ###
+
 initialize variable ACTION;
+initialzie variable COUNTER-OFFER;
+initialize variable RESPONSE-OFFER as a value that is LESS than {max_offer} but GREATER than {current_offer}.
 
 IF Candidate's response DOES NOT INCLUDE A NUMBER:
-    set $ACTION to "Respond appropriately to the message.";
-    RETURN $ACTION;
+    ACTION = "Respond appropriately to the message.";
 
 ELSE:
-    set $COUNTER-OFFER to the value of Candidate's newly proposed salary;
+    set COUNTER-OFFER to the value of Candidate's newly proposed salary;
 
     IF COUNTER-OFFER is LESS THAN the current offer of {current_offer}:
-        set $ACTION to "In a slightly confused but pleased and professional manner, gladly agree to the counter-offer with value of COUNTER-OFFER";
-        RETURN $ACTION;
+        ACTION = "In a slightly confused but pleased and professional manner, gladly agree to the counter-offer with value of COUNTER-OFFER";
 
-    ELSE IF $COUNTER-OFFER is GREATER THAN {max_offer}:
-        EITHER (
-        set $RESPONSE-OFFER such that it is LESS than {max_offer} yet GREATER than {current_offer};
-        set $ACTION to "Professionally and tactfully negotiate by responding with a response offer with the value of $RESPONSE-OFFER";
-        )
-        OR (
-        set $ACTION to "Politely decline, and maintain position at {current_offer}";
-        )
-        RETURN $ACTION;
-
-    ELSE IF $COUNTER-OFFER is GREATER THAN {current_offer} and LESS THAN {max_offer}:
-        EITHER (
-        set $RESPONSE-OFFER such that it is LESS than $COUNTER-OFFER yet GREATER than {current_offer};
-        set $ACTION to "Professionally and tactfully negotiate by responding with a response offer with the value of $RESPONSE-OFFER";
-        )
-        OR (
-        set $ACTION to "After careful consideration, accept offer";
-        )
-        RETURN $ACTION;
+    ELSE IF COUNTER-OFFER is GREATER THAN {max_offer}:
+        EITHER:
+            set RESPONSE-OFFER such that it is LESS than {max_offer} yet GREATER than {current_offer};
+            ACTION = "Professionally and tactfully negotiate by responding with a response offer with the value of $RESPONSE-OFFER";
+        
+        OR:
+            ACTION = "Politely decline, and maintain position at {current_offer}";
 
 
-IF $RESPONSE-OFFER is GREATER THAN {max_offer}:
-    set $RESPONSE-OFFER such that it is LESS than $COUNTER-OFFER yet GREATER than {current_offer};
+    ELSE IF COUNTER-OFFER is GREATER THAN {current_offer} and LESS THAN {max_offer}:
+        EITHER:
+            set RESPONSE-OFFER such that it is LESS than COUNTER-OFFER yet GREATER than {current_offer};
+            ACTION = "Professionally and tactfully negotiate by responding with a response offer with the value of $RESPONSE-OFFER";
+        OR:
+            ACTION = "After careful consideration, accept offer";
 
-IF $RESPONSE-OFFER is GREATER THAN $COUNTER-OFFER:
-    set $RESPONSE-OFFER such that it is LESS than $COUNTER-OFFER yet GREATER than {current_offer};
+
+IF RESPONSE-OFFER is GREATER THAN {max_offer}:
+    set RESPONSE-OFFER such that it is LESS than COUNTER-OFFER yet GREATER than {current_offer};
+
+IF RESPONSE-OFFER is GREATER THAN COUNTER-OFFER:
+    set RESPONSE-OFFER such that it is LESS than COUNTER-OFFER yet GREATER than {current_offer};
+
+##
+
+NEXT:
+    Respond to the Email according to the ACTION and if applicable, the COUNTER-OFFER and RESPONSE-OFFER.
 
 
-FINALLY:
-    Respond to the Email according to the $ACTION and if applicable, the $COUNTER-OFFER and $RESPONSE-OFFER.
-</INSTRUCTIONS>
+###
 
-My email response, as the CANDIDATE, is below in quotations.
+My email response, as the CANDIDATE, is below in quotations. Use this to follow the INSTRUCTIONS:
 
-First, briefly explain your next $ACTION, and what the $REPONSE-OFFER is, based on the INSTRUCTIONS.
-Then, please respond appropriately as the RECRUITER, again in email format, according to the $ACTION from the INSTRUCTIONS.
-
-Candidate email: """{prompt}"""
+CANDIDATE EMAIL: """{prompt}"""

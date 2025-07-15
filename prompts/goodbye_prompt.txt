@@ -1,10 +1,11 @@
-<INSTRUCTIONS>
+## INSTRUCTIONS ##
 The negotiations have now ended. The CANDIDATE has walked away from the offer.
 
 As the RECRUITER ONLY, graciouslly and professionally acknolwedge the CANDIDATE'S declining of the job for reasons specificed in the
 DECLINING message, and wish them well.
 
 Do not say anything else.
-</INSTRUCTIONS>
+
+##
 
 DECLINING: {last_message}

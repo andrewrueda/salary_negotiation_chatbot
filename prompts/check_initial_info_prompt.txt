@@ -1,4 +1,4 @@
-INSTRUCTIONS:
+## INSTRUCTIONS ##
 
 I am going to give you a STATEMENT, and you are going to determine if the STATEMENT is TRUE or FALSE.
 
@@ -10,5 +10,7 @@ Then, you must finally respond with your ultimate judgment of whether it is a TR
 statement in a one word answer: TRUE or FALSE.
 
 This judgment MUST be the final word of your response.
+
+##
 
 Here is the STATEMENT:

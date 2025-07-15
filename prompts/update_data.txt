@@ -1,18 +1,16 @@
-<INSTRUCTIONS>
-I am going to give you an $EMAIL that is part of a salary negotiation.
+## INSTRUCTIONS ##
+I am going to give you an EMAIL that is part of a salary negotiation.
 They will be discussing the correct SALARY AMOUNT as part of the negotiation.
 
 Return the value that is {compare} between the new offer in the EMAIL and {old_offer};
 
+## FIRST ## 
+ Please give me your full reasoning. I need two sentences that refer to the two values in question, as well as your
+reasoning for which one is {compare}.
 
-First:
-    Please give me your full reasoning. I need two sentences that refer to the two values in question, as well as your
-    reasoning for which one is {compare}.
-Then:
-    Please return a FINAL JUDGMENT, which is the value you are deciding is the {compare} among the known given values. This needs to be the LAST PART
-    of your response.
-</INSTRUCTIONS>
+# THEN ##
+Please return a FINAL JUDGMENT, which is the value you are deciding is the {compare} among the known given values. This needs to be the LAST PART
+of your response.
 
-<INPUT>
+## INPUT ##
 Here is the EMAIL: {last_response}
-</INPUT>

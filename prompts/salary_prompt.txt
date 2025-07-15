@@ -1,4 +1,4 @@
-INSTRUCTIONS:
+## INSTRUCTIONS ##
 
 I am applying for the job of {title} in the {industry} in the city of {city}.
 
